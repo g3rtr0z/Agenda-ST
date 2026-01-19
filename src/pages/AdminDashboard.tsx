@@ -21,7 +21,6 @@ import {
     HiBuildingOffice2,
     HiPencil,
     HiTrash,
-    HiXMark,
     HiPlus,
     HiInboxArrowDown,
     HiMagnifyingGlass,
@@ -139,17 +138,6 @@ export default function AdminDashboard() {
         } catch (error) {
             console.error('Error eliminando contacto:', error);
             alert('Error al eliminar el contacto');
-        }
-    };
-
-    const handleAddDepartment = async () => {
-        try {
-            await departmentService.create(departmentForm);
-            setShowDepartmentModal(false);
-            setDepartmentForm({ name: '' });
-        } catch (error) {
-            console.error('Error creando departamento:', error);
-            alert('Error al crear el departamento');
         }
     };
 
